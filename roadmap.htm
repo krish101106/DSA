@@ -12,328 +12,221 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #073B4C;
         }
         .chart-container {
             position: relative;
             width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 320px;
-            max-height: 400px;
+            max-width: 500px;
+            margin: auto;
+            height: 300px;
         }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 400px;
-            }
+        details > summary {
+            list-style: none;
         }
-        .flow-arrow {
-            position: relative;
-            color: #118AB2;
-            font-size: 2.5rem;
-            line-height: 1;
+        details > summary::-webkit-details-marker {
+            display: none;
         }
-        .timeline {
-            position: relative;
-            width: 100%;
-            padding: 2rem 0;
+        .roadmap-item input:checked + label {
+            text-decoration: line-through;
+            color: #9ca3af;
         }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: #118AB2;
-            transform: translateY(-50%);
+        .progress-bar-fill {
+            transition: width 0.5s ease-in-out;
         }
-        .timeline-item {
-            position: relative;
-        }
-        .timeline-dot {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 24px;
-            height: 24px;
-            background-color: #FFD166;
-            border: 4px solid #118AB2;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 10;
-        }
-        .timeline-content {
-            margin-top: 20px;
-        }
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-top: -20px;
-            padding-bottom: 50px;
-        }
-        .timeline-item:nth-child(even) .timeline-content {
-             padding-top: 50px;
-        }
+        /* Custom colors from your example */
+        .color-1 { color: #118AB2; } .bg-1 { background-color: #118AB2; }
+        .color-2 { color: #06D6A0; } .bg-2 { background-color: #06D6A0; }
+        .color-3 { color: #FFD166; } .bg-3 { background-color: #FFD166; }
+        .color-4 { color: #EE82EE; } .bg-4 { background-color: #EE82EE; } /* Violet */
+        .color-5 { color: #48D1CC; } .bg-5 { background-color: #48D1CC; } /* MediumTurquoise */
+        .color-6 { color: #FF7F50; } .bg-6 { background-color: #FF7F50; } /* Coral */
+        .color-7 { color: #EF476F; } .bg-7 { background-color: #EF476F; }
     </style>
 </head>
-<body class="bg-gray-100" style="background-color: #073B4C;">
+<body class="text-gray-200">
 
     <div class="container mx-auto p-4 md:p-8">
 
         <header class="text-center mb-12">
             <h1 class="text-4xl md:text-6xl font-black text-white mb-2">The DSA Learning Journey</h1>
-            <p class="text-xl md:text-2xl text-gray-300">A Visual Roadmap to Mastery</p>
+            <p class="text-xl md:text-2xl text-gray-400">Your Personal Roadmap to Mastery</p>
         </header>
 
-        <section class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 mb-12">
-            <h2 class="text-3xl font-bold text-center mb-2" style="color: #073B4C;">The Philosophy of Mastery</h2>
-            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-8">Effective learning isn't just about memorizing algorithms; it's about building deep, intuitive understanding. This roadmap is built on a core philosophy of mastering three critical layers for every concept you encounter.</p>
-            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-                <div class="text-center p-6 rounded-lg" style="background-color: #f0f9ff;">
-                    <h3 class="text-2xl font-bold" style="color: #118AB2;">How</h3>
-                    <p class="text-gray-700">The mechanical, step-by-step logic and implementation.</p>
-                </div>
-                <div class="flow-arrow transform md:rotate-0">&rarr;</div>
-                <div class="text-center p-6 rounded-lg" style="background-color: #fffbeb;">
-                    <h3 class="text-2xl font-bold" style="color: #FFD166;">When</h3>
-                    <p class="text-gray-700">The pattern recognition to identify which problems it solves.</p>
-                </div>
-                <div class="flow-arrow transform md:rotate-0">&rarr;</div>
-                <div class="text-center p-6 rounded-lg" style="background-color: #f0fdf4;">
-                    <h3 class="text-2xl font-bold" style="color: #06D6A0;">Why</h3>
-                    <p class="text-gray-700">The reasoning behind its efficiency and correctness.</p>
-                </div>
+        <div class="bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8 mb-12">
+            <div class="flex justify-between items-center mb-2">
+                 <span class="text-sm font-medium text-gray-300">Total Progress</span>
+                 <span id="progress-text" class="text-sm font-bold color-2">0%</span>
             </div>
-        </section>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 flex flex-col items-center justify-center text-center">
-                <h3 class="text-2xl font-bold mb-2" style="color: #073B4C;">Principle 1: Analyze Complexity First</h3>
-                <p class="text-gray-600 mb-4">Make Big O notation your native language. For every solution, determine its time and space complexity. This isn't an afterthought; it's a core part of the problem-solving process.</p>
-                <div class="text-7xl font-black" style="color: #118AB2;">O(n)</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 flex flex-col items-center justify-center text-center">
-                 <h3 class="text-2xl font-bold mb-2" style="color: #073B4C;">Principle 2: Learn Recursion Early</h3>
-                 <p class="text-gray-600 mb-4">Treat recursion as a fundamental tool, not an advanced topic. It is the gateway to understanding trees, graphs, and many efficient sorting algorithms. Master it to unlock the next level of DSA.</p>
-                 <div class="text-6xl font-black" style="color: #FF6B6B;">&#8635;</div>
-                 <p class="text-2xl font-bold" style="color: #FF6B6B;">Recursion</p>
+            <div class="w-full bg-slate-700 rounded-full h-3">
+                <div id="progress-bar" class="bg-2 h-3 rounded-full progress-bar-fill" style="width: 0%"></div>
             </div>
         </div>
+        
+        <div class="space-y-8">
 
-        <section class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8" style="color: #073B4C;">The Roadmap Timeline</h2>
-            <div class="timeline">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="timeline-item text-center">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3 class="font-bold text-lg" style="color: #118AB2;">Phase 1</h3>
-                            <p class="font-semibold text-gray-800">Foundations</p>
-                            <p class="text-sm text-gray-500">(Weeks 1-3)</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item text-center">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3 class="font-bold text-lg" style="color: #118AB2;">Phase 2</h3>
-                            <p class="font-semibold text-gray-800">Core Concepts</p>
-                            <p class="text-sm text-gray-500">(Weeks 4-7)</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item text-center">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3 class="font-bold text-lg" style="color: #118AB2;">Phase 3</h3>
-                            <p class="font-semibold text-gray-800">Core Data Structures</p>
-                            <p class="text-sm text-gray-500">(Weeks 8-14)</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item text-center">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3 class="font-bold text-lg" style="color: #118AB2;">Phase 4</h3>
-                            <p class="font-semibold text-gray-800">Advanced Topics</p>
-                            <p class="text-sm text-gray-500">(Weeks 15+)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <!-- Step 1: Array Algorithms -->
+            <section class="bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8">
+                <h3 class="text-2xl font-bold mb-1 color-1">Step 1: Array Algorithms</h3>
+                <p class="text-gray-400 mb-6">The absolute foundation. Master these techniques to solve a huge percentage of coding problems.</p>
+                <details>
+                    <summary class="cursor-pointer bg-1 text-white text-center font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity">View Topics & Track Progress</summary>
+                    <ul class="space-y-3 mt-6 text-gray-300">
+                        <li class="roadmap-item"><input type="checkbox" id="item1" class="mr-3 rounded"><label for="item1">Two Pointers</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item2" class="mr-3 rounded"><label for="item2">Sliding Window</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item3" class="mr-3 rounded"><label for="item3">Prefix Sum</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item4" class="mr-3 rounded"><label for="item4">Hash Tables (for Arrays)</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item5" class="mr-3 rounded"><label for="item5">Kadane's Algorithm</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item6" class="mr-3 rounded"><label for="item6">Bit Manipulation</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item7" class="mr-3 rounded"><label for="item7">String & Matrix Problems</label></li>
+                    </ul>
+                </details>
+            </section>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
-                <h3 class="text-2xl font-bold text-center mb-2" style="color: #073B4C;">Phase 1 & 2: Key Topic Focus</h3>
-                <p class="text-center text-gray-600 mb-6">The initial phases are about building a strong base. The focus is on fundamental techniques and algorithms that appear in a vast majority of problems. Mastering these is non-negotiable.</p>
-                <div class="chart-container">
-                    <canvas id="phase1_2Chart"></canvas>
-                </div>
-            </div>
+            <!-- Step 2: Searching & Sorting -->
+            <section class="bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8">
+                <h3 class="text-2xl font-bold mb-1 color-2">Step 2: Searching & Sorting Algorithms</h3>
+                <p class="text-gray-400 mb-6">Fundamental concepts for organizing and finding data. Understanding their trade-offs is key.</p>
+                <details>
+                    <summary class="cursor-pointer bg-2 text-slate-900 text-center font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity">View Topics & Track Progress</summary>
+                    <ul class="space-y-3 mt-6 text-gray-300">
+                        <li class="roadmap-item"><input type="checkbox" id="item8" class="mr-3 rounded"><label for="item8">Linear Search</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item9" class="mr-3 rounded"><label for="item9">Binary Search</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item10" class="mr-3 rounded"><label for="item10">Selection Sort</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item11" class="mr-3 rounded"><label for="item11">Bubble Sort</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item12" class="mr-3 rounded"><label for="item12">Insertion Sort</label></li>
+                        <li class="font-semibold text-gray-400 mt-4">Highly Recommended Additions:</li>
+                        <li class="roadmap-item"><input type="checkbox" id="item13" class="mr-3 rounded"><label for="item13">Merge Sort</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item14" class="mr-3 rounded"><label for="item14">Quick Sort</label></li>
+                    </ul>
+                </details>
+            </section>
 
-            <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
-                <h3 class="text-2xl font-bold text-center mb-2" style="color: #073B4C;">Phase 3: Core Data Structures</h3>
-                 <p class="text-center text-gray-600 mb-6">This phase is about organizing data. Each structure offers a unique way to store and access information, trading off benefits in speed and memory. Trees and Hashing are particularly high-impact.</p>
-                <div class="chart-container">
-                    <canvas id="phase3Chart"></canvas>
-                </div>
-            </div>
-            
-            <div class="lg:col-span-2 bg-white rounded-2xl shadow-2xl p-6 md:p-8">
-                <h3 class="text-2xl font-bold text-center mb-2" style="color: #073B4C;">Phase 4: Advanced Topics Distribution</h3>
-                <p class="text-center text-gray-600 mb-6">The final phase tackles the most powerful and complex techniques. Graphs and Dynamic Programming (DP) are vast fields that model complex networks and optimization problems, forming the peak of DSA mastery.</p>
-                <div class="chart-container">
-                    <canvas id="phase4Chart"></canvas>
-                </div>
-            </div>
+            <!-- Step 3: Basic Data Structures -->
+            <section class="bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8">
+                <h3 class="text-2xl font-bold mb-1 color-3">Step 3: Basic Data Structures</h3>
+                <p class="text-gray-400 mb-6">Specialized structures for managing data flow and connections.</p>
+                <details>
+                    <summary class="cursor-pointer bg-3 text-slate-900 text-center font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity">View Topics & Track Progress</summary>
+                    <ul class="space-y-3 mt-6 text-gray-300">
+                        <li class="roadmap-item"><input type="checkbox" id="item15" class="mr-3 rounded"><label for="item15">Stack (LIFO)</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item16" class="mr-3 rounded"><label for="item16">Queue (FIFO)</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item17" class="mr-3 rounded"><label for="item17">Linked List (Singly, Doubly)</label></li>
+                    </ul>
+                </details>
+            </section>
+
+            <!-- Step 4: Recursion & Backtracking -->
+            <section class="bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8">
+                <h3 class="text-2xl font-bold mb-1 color-4">Step 4: Recursion & Backtracking</h3>
+                <p class="text-gray-400 mb-6">A powerful problem-solving paradigm that unlocks solutions to complex problems involving trees, graphs, and subsets.</p>
+                <details>
+                    <summary class="cursor-pointer bg-4 text-white text-center font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity">View Topics & Track Progress</summary>
+                    <ul class="space-y-3 mt-6 text-gray-300">
+                        <li class="roadmap-item"><input type="checkbox" id="item18" class="mr-3 rounded"><label for="item18">Recursion Fundamentals</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item19" class="mr-3 rounded"><label for="item19">Backtracking (Subsets, Permutations, etc.)</label></li>
+                    </ul>
+                </details>
+            </section>
+
+            <!-- Step 5: Trees -->
+            <section class="bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8">
+                <h3 class="text-2xl font-bold mb-1 color-5">Step 5: Trees</h3>
+                <p class="text-gray-400 mb-6">Hierarchical data structures essential for things like filesystems, databases, and efficient searching.</p>
+                <details>
+                    <summary class="cursor-pointer bg-5 text-slate-900 text-center font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity">View Topics & Track Progress</summary>
+                    <ul class="space-y-3 mt-6 text-gray-300">
+                        <li class="roadmap-item"><input type="checkbox" id="item20" class="mr-3 rounded"><label for="item20">Trees & its Types (Terminology)</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item21" class="mr-3 rounded"><label for="item21">Binary Tree Traversals (BFS, DFS)</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item22" class="mr-3 rounded"><label for="item22">Binary Search Trees (BST)</label></li>
+                        <li class="font-semibold text-gray-400 mt-4">Related Advanced Structures:</li>
+                        <li class="roadmap-item"><input type="checkbox" id="item23" class="mr-3 rounded"><label for="item23">Heaps / Priority Queues</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item24" class="mr-3 rounded"><label for="item24">Tries</label></li>
+                    </ul>
+                </details>
+            </section>
+
+            <!-- Step 6: Graphs -->
+            <section class="bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8">
+                <h3 class="text-2xl font-bold mb-1 color-6">Step 6: Graphs</h3>
+                <p class="text-gray-400 mb-6">The ultimate data structure for modeling networks, from social media connections to GPS navigation.</p>
+                 <details>
+                    <summary class="cursor-pointer bg-6 text-white text-center font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity">View Topics & Track Progress</summary>
+                    <ul class="space-y-3 mt-6 text-gray-300">
+                        <li class="roadmap-item"><input type="checkbox" id="item25" class="mr-3 rounded"><label for="item25">Graph Representation & Traversals</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item26" class="mr-3 rounded"><label for="item26">Topological Sort</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item27" class="mr-3 rounded"><label for="item27">Shortest Path Algorithms (Dijkstra's)</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item28" class="mr-3 rounded"><label for="item28">Minimum Spanning Trees</label></li>
+                    </ul>
+                </details>
+            </section>
+
+             <!-- Step 7: Dynamic Programming -->
+            <section class="bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8">
+                <h3 class="text-2xl font-bold mb-1 color-7">Step 7: Dynamic Programming</h3>
+                <p class="text-gray-400 mb-6">The art of solving complex problems by breaking them down into simpler sub-problems. The peak of DSA mastery.</p>
+                <details>
+                    <summary class="cursor-pointer bg-7 text-white text-center font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity">View Topics & Track Progress</summary>
+                    <ul class="space-y-3 mt-6 text-gray-300">
+                        <li class="roadmap-item"><input type="checkbox" id="item29" class="mr-3 rounded"><label for="item29">Intro to DP (Memoization & Tabulation)</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item30" class="mr-3 rounded"><label for="item30">1D & 2D DP Problems</label></li>
+                        <li class="roadmap-item"><input type="checkbox" id="item31" class="mr-3 rounded"><label for="item31">Common DP Patterns (Knapsack, LCS)</label></li>
+                    </ul>
+                </details>
+            </section>
+
         </div>
 
-        <footer class="text-center mt-12">
-            <p class="text-gray-400">Infographic created to visualize the DSA Learning Roadmap.</p>
+        <footer class="text-center mt-12 bg-slate-800/50 rounded-2xl shadow-2xl p-8">
+            <h3 class="text-3xl font-black text-white">The Final Stage: Most Important</h3>
+            <p class="text-gray-400 text-lg mt-2">Keep Solving Questions. Consistency is Everything.</p>
         </footer>
-
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const wrapLabel = (label, maxWidth) => {
-                const words = label.split(' ');
-                const lines = [];
-                let currentLine = '';
-                words.forEach(word => {
-                    if ((currentLine + ' ' + word).length > maxWidth) {
-                        lines.push(currentLine);
-                        currentLine = word;
-                    } else {
-                        currentLine = currentLine ? currentLine + ' ' + word : word;
-                    }
+            // --- Progress Tracking Logic ---
+            const checkboxes = document.querySelectorAll('.roadmap-item input[type="checkbox"]');
+            const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
+            const totalItems = checkboxes.length;
+            const storageKey = 'dsaJourneyProgress';
+
+            function updateProgress() {
+                const checkedItems = document.querySelectorAll('.roadmap-item input[type="checkbox"]:checked').length;
+                const percentage = totalItems > 0 ? Math.round((checkedItems / totalItems) * 100) : 0;
+                progressBar.style.width = `${percentage}%`;
+                progressText.textContent = `${percentage}% Complete`;
+            }
+
+            function saveProgress() {
+                const progress = {};
+                checkboxes.forEach(checkbox => {
+                    progress[checkbox.id] = checkbox.checked;
                 });
-                lines.push(currentLine);
-                return lines;
-            };
+                localStorage.setItem(storageKey, JSON.stringify(progress));
+            }
 
-            const tooltipTitleCallback = (tooltipItems) => {
-                const item = tooltipItems[0];
-                let label = item.chart.data.labels[item.dataIndex];
-                if (Array.isArray(label)) {
-                    return label.join(' ');
-                } else {
-                    return label;
+            function loadProgress() {
+                const savedProgress = JSON.parse(localStorage.getItem(storageKey));
+                if (savedProgress) {
+                    checkboxes.forEach(checkbox => {
+                        if (savedProgress[checkbox.id]) checkbox.checked = true;
+                    });
                 }
-            };
-            
-            const sharedChartOptions = {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    tooltip: {
-                        callbacks: {
-                            title: tooltipTitleCallback
-                        }
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            display: false
-                        },
-                        grid: {
-                            display: false
-                        }
-                    },
-                    x: {
-                         grid: {
-                            display: false
-                        }
-                    }
-                }
-            };
+            }
 
-            const phase1_2Data = {
-                labels: [wrapLabel('Arrays & Strings', 16), wrapLabel('Recursion & Backtracking', 16), wrapLabel('Searching & Sorting', 16)],
-                datasets: [{
-                    label: 'Relative Importance/Time',
-                    data: [85, 90, 80],
-                    backgroundColor: ['#118AB2', '#FF6B6B', '#FFD166'],
-                    borderColor: ['#073B4C', '#073B4C', '#073B4C'],
-                    borderWidth: 2
-                }]
-            };
-            new Chart(document.getElementById('phase1_2Chart'), {
-                type: 'bar',
-                data: phase1_2Data,
-                options: sharedChartOptions
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', () => {
+                    saveProgress();
+                    updateProgress();
+                });
             });
 
-            const phase3Data = {
-                labels: ['Linked Lists', 'Stacks & Queues', wrapLabel('Trees & BSTs', 16), 'Heaps', 'Hashing'],
-                datasets: [{
-                    label: 'Problem Solving Impact',
-                    data: [
-                        { x: 1, y: 1, r: 20 },
-                        { x: 2, y: 2, r: 25 },
-                        { x: 3, y: 3, r: 40 },
-                        { x: 4, y: 2, r: 30 },
-                        { x: 5, y: 1, r: 35 }
-                    ],
-                    backgroundColor: ['#FF6B6B', '#FFD166', '#06D6A0', '#118AB2', '#073B4C']
-                }]
-            };
-            new Chart(document.getElementById('phase3Chart'), {
-                type: 'bubble',
-                data: phase3Data,
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            callbacks: {
-                                title: tooltipTitleCallback,
-                                label: function(context) {
-                                    return `Impact Radius: ${context.raw.r}`;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        y: { display: false },
-                        x: { display: false }
-                    }
-                }
-            });
-            
-            const phase4Data = {
-                labels: ['Graphs', wrapLabel('Dynamic Programming', 16), 'Tries', 'Greedy'],
-                datasets: [{
-                    label: 'Relative Complexity',
-                    data: [50, 40, 5, 5],
-                    backgroundColor: ['#06D6A0', '#118AB2', '#FFD166', '#FF6B6B'],
-                    hoverOffset: 4
-                }]
-            };
-            new Chart(document.getElementById('phase4Chart'), {
-                type: 'doughnut',
-                data: phase4Data,
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'right',
-                        },
-                        tooltip: {
-                            callbacks: {
-                                title: tooltipTitleCallback
-                            }
-                        }
-                    }
-                }
-            });
+            loadProgress();
+            updateProgress();
         });
     </script>
 </body>
 </html>
+
