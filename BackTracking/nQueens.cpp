@@ -1,73 +1,77 @@
+
 #include <iostream>
 #include <string>
 #include <vector>
-
 using namespace std;
 
-int n;
+void print(vector<vector<char>> b, int n){
 
-void ratInMaze(vector<vector<int>>& m,
-               vector<vector<int>>& visited,
-               int r, int c) {
-
-    // base case: reached destination
-    if (r == n - 1 && c == n - 1) {
-        visited[r][c] = 1;
-        
-        // print current path
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                cout << visited[i][j] << " ";
-            }
-            cout << endl;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cout<<b[i][j]<<" ";
         }
-        cout << "-----" << endl;
+        cout<<endl;
+    }
 
-        visited[r][c] = 0; // backtrack
+}
+
+bool isSafe(vector<vector<char>> &b, int r, int j) {
+
+    // vertical up
+    for (int i = r; i >= 0; i--) {
+        if (b[i][j] == 'q') return false;
+    }
+
+    // diagonal left-up
+    for (int i = r, k = j; i >= 0 && k >= 0; i--, k--) {
+        if (b[i][k] == 'q') return false;
+    }
+
+    // diagonal right-up
+    for (int i = r, k = j; i >= 0 && k < b.size(); i--, k++) {
+        if (b[i][k] == 'q') return false;
+    }
+
+    return true;
+}
+
+void nQueens(vector<vector<char>> b,int r){
+
+    int n =b.size();
+    if(r==n){
+        print(b,n);
         return;
     }
 
-    // mark current cell
-    visited[r][c] = 1;
+    for(int i=0;i<n;i++){
 
-    // LEFT
-    if (c - 1 >= 0 && m[r][c - 1] == 1 && visited[r][c - 1] == 0) {
-        ratInMaze(m, visited, r, c - 1);
+        if(isSafe(b, r, i)){
+            b[r][i]='q'; 
+            nQueens(b,r+1);
+            b[r][i]='.'; 
+        }
+
+
+        cout<<"----------------"<<endl;
     }
 
-    // RIGHT
-    if (c + 1 < n && m[r][c + 1] == 1 && visited[r][c + 1] == 0) {
-        ratInMaze(m, visited, r, c + 1);
-    }
-
-    // DOWN
-    if (r + 1 < n && m[r + 1][c] == 1 && visited[r + 1][c] == 0) {
-        ratInMaze(m, visited, r + 1, c);
-    }
-
-    // UP
-    if (r - 1 >= 0 && m[r - 1][c] == 1 && visited[r - 1][c] == 0) {
-        ratInMaze(m, visited, r - 1, c);
-    }
-
-    // unmark (BACKTRACK)
-    visited[r][c] = 0;
 }
 
+
 int main() {
-    vector<vector<int>> maze = {
-        {1, 1, 1},
-        {1, 1, 0},
-        {1, 1, 1}
-    };
+    vector<vector<char>> b;
 
-    n = maze.size();
+    int n=5;
 
-    vector<vector<int>> visited(n, vector<int>(n, 0));
-
-    if (maze[0][0] == 1) {
-        ratInMaze(maze, visited, 0, 0);
+    for(int i=0;i<n;i++){
+        vector<char> newRow;
+        for(int j=0;j<n;j++){
+            newRow.push_back('.');
+        }
+        b.push_back(newRow);
     }
+
+    nQueens(b,0);
 
     return 0;
 }
