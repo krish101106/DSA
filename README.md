@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0075-sort-colors](https://github.com/krish101106/DSA/tree/master/0075-sort-colors) |
 | [0189-rotate-array](https://github.com/krish101106/DSA/tree/master/0189-rotate-array) |
 ## Math
 |  |
@@ -12,5 +13,10 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Two Pointers
 |  |
 | ------- |
+| [0075-sort-colors](https://github.com/krish101106/DSA/tree/master/0075-sort-colors) |
 | [0189-rotate-array](https://github.com/krish101106/DSA/tree/master/0189-rotate-array) |
+## Sorting
+|  |
+| ------- |
+| [0075-sort-colors](https://github.com/krish101106/DSA/tree/master/0075-sort-colors) |
 <!---LeetCode Topics End-->
