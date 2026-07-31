@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0035-search-insert-position](https://github.com/krish101106/DSA/tree/master/0035-search-insert-position) |
 | [0075-sort-colors](https://github.com/krish101106/DSA/tree/master/0075-sort-colors) |
 | [0189-rotate-array](https://github.com/krish101106/DSA/tree/master/0189-rotate-array) |
 | [0268-missing-number](https://github.com/krish101106/DSA/tree/master/0268-missing-number) |
@@ -29,6 +30,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Search
 |  |
 | ------- |
+| [0035-search-insert-position](https://github.com/krish101106/DSA/tree/master/0035-search-insert-position) |
 | [0268-missing-number](https://github.com/krish101106/DSA/tree/master/0268-missing-number) |
 ## Bit Manipulation
 |  |
