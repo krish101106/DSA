@@ -15,6 +15,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0189-rotate-array](https://github.com/krish101106/DSA/tree/master/0189-rotate-array) |
 | [0268-missing-number](https://github.com/krish101106/DSA/tree/master/0268-missing-number) |
 | [0540-single-element-in-a-sorted-array](https://github.com/krish101106/DSA/tree/master/0540-single-element-in-a-sorted-array) |
+| [0643-maximum-average-subarray-i](https://github.com/krish101106/DSA/tree/master/0643-maximum-average-subarray-i) |
 | [0704-binary-search](https://github.com/krish101106/DSA/tree/master/0704-binary-search) |
 ## Math
 |  |
@@ -63,4 +64,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0074-search-a-2d-matrix](https://github.com/krish101106/DSA/tree/master/0074-search-a-2d-matrix) |
+## Sliding Window
+|  |
+| ------- |
+| [0643-maximum-average-subarray-i](https://github.com/krish101106/DSA/tree/master/0643-maximum-average-subarray-i) |
 <!---LeetCode Topics End-->
