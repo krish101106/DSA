@@ -34,6 +34,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0075-sort-colors](https://github.com/krish101106/DSA/tree/master/0075-sort-colors) |
+| [0125-valid-palindrome](https://github.com/krish101106/DSA/tree/master/0125-valid-palindrome) |
 | [0189-rotate-array](https://github.com/krish101106/DSA/tree/master/0189-rotate-array) |
 ## Sorting
 |  |
@@ -106,6 +107,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/krish101106/DSA/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0125-valid-palindrome](https://github.com/krish101106/DSA/tree/master/0125-valid-palindrome) |
 ## Prefix Sum
 |  |
 | ------- |
