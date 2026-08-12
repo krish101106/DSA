@@ -38,6 +38,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0075-sort-colors](https://github.com/krish101106/DSA/tree/master/0075-sort-colors) |
 | [0125-valid-palindrome](https://github.com/krish101106/DSA/tree/master/0125-valid-palindrome) |
 | [0189-rotate-array](https://github.com/krish101106/DSA/tree/master/0189-rotate-array) |
+| [0392-is-subsequence](https://github.com/krish101106/DSA/tree/master/0392-is-subsequence) |
 ## Sorting
 |  |
 | ------- |
@@ -92,6 +93,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/krish101106/DSA/tree/master/0121-best-time-to-buy-and-sell-stock) |
+| [0392-is-subsequence](https://github.com/krish101106/DSA/tree/master/0392-is-subsequence) |
 | [0877-stone-game](https://github.com/krish101106/DSA/tree/master/0877-stone-game) |
 ## Minimax
 |  |
@@ -110,6 +112,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/krish101106/DSA/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0125-valid-palindrome](https://github.com/krish101106/DSA/tree/master/0125-valid-palindrome) |
+| [0392-is-subsequence](https://github.com/krish101106/DSA/tree/master/0392-is-subsequence) |
 ## Prefix Sum
 |  |
 | ------- |
