@@ -23,6 +23,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0704-binary-search](https://github.com/krish101106/DSA/tree/master/0704-binary-search) |
 | [0713-subarray-product-less-than-k](https://github.com/krish101106/DSA/tree/master/0713-subarray-product-less-than-k) |
 | [0877-stone-game](https://github.com/krish101106/DSA/tree/master/0877-stone-game) |
+| [0881-boats-to-save-people](https://github.com/krish101106/DSA/tree/master/0881-boats-to-save-people) |
 | [1004-max-consecutive-ones-iii](https://github.com/krish101106/DSA/tree/master/1004-max-consecutive-ones-iii) |
 ## Math
 |  |
@@ -39,11 +40,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0125-valid-palindrome](https://github.com/krish101106/DSA/tree/master/0125-valid-palindrome) |
 | [0189-rotate-array](https://github.com/krish101106/DSA/tree/master/0189-rotate-array) |
 | [0392-is-subsequence](https://github.com/krish101106/DSA/tree/master/0392-is-subsequence) |
+| [0881-boats-to-save-people](https://github.com/krish101106/DSA/tree/master/0881-boats-to-save-people) |
 ## Sorting
 |  |
 | ------- |
 | [0075-sort-colors](https://github.com/krish101106/DSA/tree/master/0075-sort-colors) |
 | [0268-missing-number](https://github.com/krish101106/DSA/tree/master/0268-missing-number) |
+| [0881-boats-to-save-people](https://github.com/krish101106/DSA/tree/master/0881-boats-to-save-people) |
 ## Hash Table
 |  |
 | ------- |
@@ -123,4 +126,9 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/krish101106/DSA/tree/master/0011-container-with-most-water) |
+| [0881-boats-to-save-people](https://github.com/krish101106/DSA/tree/master/0881-boats-to-save-people) |
+## Timsort
+|  |
+| ------- |
+| [0881-boats-to-save-people](https://github.com/krish101106/DSA/tree/master/0881-boats-to-save-people) |
 <!---LeetCode Topics End-->
