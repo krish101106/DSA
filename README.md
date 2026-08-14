@@ -39,6 +39,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1480-running-sum-of-1d-array](https://github.com/krish101106/DSA/tree/master/1480-running-sum-of-1d-array) |
 | [1732-find-the-highest-altitude](https://github.com/krish101106/DSA/tree/master/1732-find-the-highest-altitude) |
 | [1985-find-the-kth-largest-integer-in-the-array](https://github.com/krish101106/DSA/tree/master/1985-find-the-kth-largest-integer-in-the-array) |
+| [2149-rearrange-array-elements-by-sign](https://github.com/krish101106/DSA/tree/master/2149-rearrange-array-elements-by-sign) |
 ## Math
 |  |
 | ------- |
@@ -61,6 +62,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0392-is-subsequence](https://github.com/krish101106/DSA/tree/master/0392-is-subsequence) |
 | [0881-boats-to-save-people](https://github.com/krish101106/DSA/tree/master/0881-boats-to-save-people) |
 | [0905-sort-array-by-parity](https://github.com/krish101106/DSA/tree/master/0905-sort-array-by-parity) |
+| [2149-rearrange-array-elements-by-sign](https://github.com/krish101106/DSA/tree/master/2149-rearrange-array-elements-by-sign) |
 ## Sorting
 |  |
 | ------- |
@@ -184,4 +186,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0303-range-sum-query-immutable](https://github.com/krish101106/DSA/tree/master/0303-range-sum-query-immutable) |
+## Simulation
+|  |
+| ------- |
+| [2149-rearrange-array-elements-by-sign](https://github.com/krish101106/DSA/tree/master/2149-rearrange-array-elements-by-sign) |
 <!---LeetCode Topics End-->
