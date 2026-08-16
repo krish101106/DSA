@@ -11,11 +11,9 @@ public:
                 if(i<n){
                     i++;
                 }
-                j++;
-                
-            }else{
-                j++;
+
             }
+            j++;
         }
 
         if(s==temp){
