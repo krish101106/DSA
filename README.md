@@ -38,6 +38,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0877-stone-game](https://github.com/krish101106/DSA/tree/master/0877-stone-game) |
 | [0881-boats-to-save-people](https://github.com/krish101106/DSA/tree/master/0881-boats-to-save-people) |
 | [0905-sort-array-by-parity](https://github.com/krish101106/DSA/tree/master/0905-sort-array-by-parity) |
+| [0918-maximum-sum-circular-subarray](https://github.com/krish101106/DSA/tree/master/0918-maximum-sum-circular-subarray) |
 | [1004-max-consecutive-ones-iii](https://github.com/krish101106/DSA/tree/master/1004-max-consecutive-ones-iii) |
 | [1480-running-sum-of-1d-array](https://github.com/krish101106/DSA/tree/master/1480-running-sum-of-1d-array) |
 | [1732-find-the-highest-altitude](https://github.com/krish101106/DSA/tree/master/1732-find-the-highest-altitude) |
@@ -135,6 +136,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0152-maximum-product-subarray](https://github.com/krish101106/DSA/tree/master/0152-maximum-product-subarray) |
 | [0392-is-subsequence](https://github.com/krish101106/DSA/tree/master/0392-is-subsequence) |
 | [0877-stone-game](https://github.com/krish101106/DSA/tree/master/0877-stone-game) |
+| [0918-maximum-sum-circular-subarray](https://github.com/krish101106/DSA/tree/master/0918-maximum-sum-circular-subarray) |
 ## Minimax
 |  |
 | ------- |
@@ -178,6 +180,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0053-maximum-subarray](https://github.com/krish101106/DSA/tree/master/0053-maximum-subarray) |
 | [0215-kth-largest-element-in-an-array](https://github.com/krish101106/DSA/tree/master/0215-kth-largest-element-in-an-array) |
+| [0918-maximum-sum-circular-subarray](https://github.com/krish101106/DSA/tree/master/0918-maximum-sum-circular-subarray) |
 | [1985-find-the-kth-largest-integer-in-the-array](https://github.com/krish101106/DSA/tree/master/1985-find-the-kth-largest-integer-in-the-array) |
 ## Heap (Priority Queue)
 |  |
@@ -197,4 +200,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2149-rearrange-array-elements-by-sign](https://github.com/krish101106/DSA/tree/master/2149-rearrange-array-elements-by-sign) |
+## Queue
+|  |
+| ------- |
+| [0918-maximum-sum-circular-subarray](https://github.com/krish101106/DSA/tree/master/0918-maximum-sum-circular-subarray) |
+## Monotonic Queue
+|  |
+| ------- |
+| [0918-maximum-sum-circular-subarray](https://github.com/krish101106/DSA/tree/master/0918-maximum-sum-circular-subarray) |
 <!---LeetCode Topics End-->
