@@ -31,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0217-contains-duplicate](https://github.com/krish101106/DSA/tree/master/0217-contains-duplicate) |
 | [0219-contains-duplicate-ii](https://github.com/krish101106/DSA/tree/master/0219-contains-duplicate-ii) |
 | [0268-missing-number](https://github.com/krish101106/DSA/tree/master/0268-missing-number) |
+| [0287-find-the-duplicate-number](https://github.com/krish101106/DSA/tree/master/0287-find-the-duplicate-number) |
 | [0303-range-sum-query-immutable](https://github.com/krish101106/DSA/tree/master/0303-range-sum-query-immutable) |
 | [0485-max-consecutive-ones](https://github.com/krish101106/DSA/tree/master/0485-max-consecutive-ones) |
 | [0540-single-element-in-a-sorted-array](https://github.com/krish101106/DSA/tree/master/0540-single-element-in-a-sorted-array) |
@@ -70,6 +71,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0142-linked-list-cycle-ii](https://github.com/krish101106/DSA/tree/master/0142-linked-list-cycle-ii) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/krish101106/DSA/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0189-rotate-array](https://github.com/krish101106/DSA/tree/master/0189-rotate-array) |
+| [0287-find-the-duplicate-number](https://github.com/krish101106/DSA/tree/master/0287-find-the-duplicate-number) |
 | [0392-is-subsequence](https://github.com/krish101106/DSA/tree/master/0392-is-subsequence) |
 | [0876-middle-of-the-linked-list](https://github.com/krish101106/DSA/tree/master/0876-middle-of-the-linked-list) |
 | [0881-boats-to-save-people](https://github.com/krish101106/DSA/tree/master/0881-boats-to-save-people) |
@@ -117,6 +119,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0209-minimum-size-subarray-sum](https://github.com/krish101106/DSA/tree/master/0209-minimum-size-subarray-sum) |
 | [0268-missing-number](https://github.com/krish101106/DSA/tree/master/0268-missing-number) |
 | [0278-first-bad-version](https://github.com/krish101106/DSA/tree/master/0278-first-bad-version) |
+| [0287-find-the-duplicate-number](https://github.com/krish101106/DSA/tree/master/0287-find-the-duplicate-number) |
 | [0540-single-element-in-a-sorted-array](https://github.com/krish101106/DSA/tree/master/0540-single-element-in-a-sorted-array) |
 | [0704-binary-search](https://github.com/krish101106/DSA/tree/master/0704-binary-search) |
 | [0713-subarray-product-less-than-k](https://github.com/krish101106/DSA/tree/master/0713-subarray-product-less-than-k) |
@@ -126,6 +129,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0136-single-number](https://github.com/krish101106/DSA/tree/master/0136-single-number) |
 | [0268-missing-number](https://github.com/krish101106/DSA/tree/master/0268-missing-number) |
+| [0287-find-the-duplicate-number](https://github.com/krish101106/DSA/tree/master/0287-find-the-duplicate-number) |
 ## Interactive
 |  |
 | ------- |
@@ -258,4 +262,9 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0141-linked-list-cycle](https://github.com/krish101106/DSA/tree/master/0141-linked-list-cycle) |
 | [0142-linked-list-cycle-ii](https://github.com/krish101106/DSA/tree/master/0142-linked-list-cycle-ii) |
+| [0287-find-the-duplicate-number](https://github.com/krish101106/DSA/tree/master/0287-find-the-duplicate-number) |
+## Pigeonhole Principle
+|  |
+| ------- |
+| [0287-find-the-duplicate-number](https://github.com/krish101106/DSA/tree/master/0287-find-the-duplicate-number) |
 <!---LeetCode Topics End-->
