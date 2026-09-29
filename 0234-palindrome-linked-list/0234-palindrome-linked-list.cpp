@@ -29,7 +29,7 @@ public:
             mid=front;
         }
 
-        slow->next=nullptr;
+        //slow->next=nullptr;
 
         //prev is the reversed part
 
